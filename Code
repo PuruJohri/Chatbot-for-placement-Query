@@ -1,0 +1,35 @@
+from nltk.chat.util import Chat,reflections
+
+pairs=[
+    ['my name is (.*)',['hi! %1']],
+    ['(hi|holla|heya|hey|hello)',['hey there!how may i help you?']],
+    ['(.*)in(.*)is fun',['%1 in %2 is indeed fun ']],
+    ['(.*) top recruiters',['The top recruiters are Microsoft, Bosch, Amazon,etc.what else?']],
+    ['(.*) highest package',['Highest Package is 42 LPA by Microsoft']],
+    ['(.*) eligibility',['Eligibility for placements is diffrent for every recruiter, we suggest keeping 7.5 CGPA;try to score as best as possible.what else?']],
+    ['(.*) attendance',['atten.:-weightage is five percent;mandatory :- seventy five plus percent.what else?']],
+    ['(.*) placement drives',[' you will know it via ums or lpu touch.anything else i can help with?']],
+    ['ok',['yups, anything else?']],
+    ['yes',['may i know?']],
+    ['sure',['go on..']],
+    ['(.*) path',['sure! ums- login >home>ums navigation>Placement services>placement portal','for lpu touch:-lputoch>Placement drive']],
+    ['(.*) (do not|did not)',[' score well in rest of examinations and specially in ca,also manage proper attendance.']],
+    ['(.*) backlog',['factors:more than ten percent in mte,more than twenty percent in ete,more then fourty percent overall/subject,umc back']],
+    ['(.*) umc back',['in case you were found disrespecting laws/ rules & regulation of university you are bearer of umc that undefines your  scholarship as well as if serious  you maybe  backed']],
+    ['(.*) come to know about selection',['you will recieve lpu touch notification regarding that.']],
+    ['no',['thank you,had a great conversation.have a good day ahead!']],
+    ['(.*) thank you',['thank you,had a great conversation.have a good day ahead!']],
+    #giving a general query convo. can be eddited as per requirements.
+]
+
+reflections
+
+my_dummy_reflections={
+    'go':'gone',
+    'hello':'hey there'
+}
+
+chat=Chat(pairs,my_dummy_reflections)
+#chat._substitute(' go hello')
+chat.converse()
+
